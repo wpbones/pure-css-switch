@@ -22,12 +22,16 @@ if ( ! function_exists( 'wpbones_is_true' ) ) {
 class HtmlTagSwitchButton extends HtmlTag
 {
   protected $attributes = [
-    'name'        => null,
-    'id'          => null,
+    'name'  => null,
+    'id'    => null,
+    'value' => '1',
+    'class' => ''
+  ];
+
+  protected $guardedAttributes = [
     'theme'       => 'flat-round',
     'right_label' => null,
     'left_label'  => null,
-    'value'       => '1',
     'checked'     => false,
     'disabled'    => false,
   ];
@@ -63,12 +67,14 @@ class HtmlTagSwitchButton extends HtmlTag
              name="<?php echo $this->name ?>"
              value="0"/>
       <?php echo $leftLabel ?>
-      <input id="<?php echo $this->id ?>"
-             name="<?php echo $this->name ?>"
-             type="checkbox"
+      <input
+        <?php echo $this->formatDataAttributes() ?>
+        <?php echo $this->formatAttributes() ?>
+        <?php echo $this->formatGlobalAttributes() ?>
+          type="checkbox"
         <?php echo $checked ?>
         <?php echo $disabled ?>
-             value="<?php echo $this->value ?>"/>
+          value="<?php echo $this->value ?>"/>
       <label for="<?php echo $this->id ?>"></label>
       <?php echo $rightLabel ?>
     </div>
