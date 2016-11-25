@@ -89,4 +89,14 @@ In your view you can use the `WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton` cla
   <p>
     <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-4' )->left_label( 'Swipe me' )->right_label( 'Swipe me' ); ?>
   </p>
+  
+  <pre>echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-5' )->left_label( 'Swipe me' )->checked( true )</pre>
+  <p>
+    <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-5' )->left_label( 'Swipe me' )->checked( true ) ?>
+  </p>
+
+  <pre>echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-6' )->left_label( 'Swipe me' )->disabled( true )</pre>
+  <p>
+    <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-6' )->left_label( 'Swipe me' )->disabled( true ) ?>
+  </p>
 ```

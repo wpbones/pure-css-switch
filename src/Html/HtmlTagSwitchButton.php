@@ -4,6 +4,21 @@ namespace WPKirk\PureCSSSwitch\Html;
 
 use WPKirk\WPBones\Html\HtmlTag;
 
+if ( ! function_exists( 'wpbones_is_true' ) ) {
+
+  /**
+   * Utility to check if a value is true.
+   *
+   * @param mixed $value String, boolean or integer.
+   *
+   * @return bool
+   */
+  function wpbones_is_true( $value )
+  {
+    return ! in_array( strtolower( $value ), [ '', 'false', '0', 'no', 'n', 'off', null ] );
+  }
+}
+
 class HtmlTagSwitchButton extends HtmlTag
 {
   protected $attributes = [
@@ -12,7 +27,9 @@ class HtmlTagSwitchButton extends HtmlTag
     'theme'       => 'flat-round',
     'right_label' => null,
     'left_label'  => null,
-    'value'       => '1'
+    'value'       => '1',
+    'checked'     => false,
+    'disabled'    => false,
   ];
 
   public static function __callStatic( $name, $arguments )
@@ -34,19 +51,23 @@ class HtmlTagSwitchButton extends HtmlTag
       $this->name = $this->id;
     }
 
-    $leftLabel = $this->left_label;
-    $leftLabel = empty( $leftLabel ) ? '' : "<label for=\"{$this->id}\">{$leftLabel}</label>";
-
-    $rightLabel = $this->right_label;
-    $rightLabel = empty( $rightLabel ) ? '' : "<label for=\"{$this->id}\">{$rightLabel}</label>";
+    $checked    = wpbones_is_true( $this->checked ) ? 'checked="checked"' : '';
+    $disabled   = wpbones_is_true( $this->disabled ) ? 'disabled="disabled"' : '';
+    $leftLabel  = wpbones_is_true( $this->left_label ) ? "<label for=\"{$this->id}\">{$this->left_label}</label>" : '';
+    $rightLabel = wpbones_is_true( $this->right_label ) ? "<label for=\"{$this->id}\">{$this->right_label}</label>" : '';
 
     ob_start(); ?>
 
-    <div class="wpbones-switch-button wpbones-switch-button-<?php echo $this->theme ?>">
+    <div class="wpbones-switch-button wpbones-switch-button-<?php echo $this->theme ?> <?php echo $disabled ? 'disabled' : '' ?>">
+      <input type="hidden"
+             name="<?php echo $this->name ?>"
+             value="0"/>
       <?php echo $leftLabel ?>
       <input id="<?php echo $this->id ?>"
              name="<?php echo $this->name ?>"
              type="checkbox"
+        <?php echo $checked ?>
+        <?php echo $disabled ?>
              value="<?php echo $this->value ?>"/>
       <label for="<?php echo $this->id ?>"></label>
       <?php echo $rightLabel ?>
