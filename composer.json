@@ -1,6 +1,6 @@
 {
   "name": "wpbones/pure-css-switch",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "homepage": "https://github.com/wpbones/pure-css-switch",
   "license": "MIT",
   "type": "library",
@@ -31,5 +31,5 @@
     }
   },
   "minimum-stability": "stable",
-  "prefer-stable": "true"
+  "prefer-stable": true
 }
