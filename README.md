@@ -18,7 +18,7 @@ You can use composer to install this package:
 
     $ composer require wpbones/pure-css-switch
 
-You may also to add `"wpbones/pure-css-switch": "^1.0"` in the `composer.json` file of your plugin:
+You may also to add `"wpbones/pure-css-switch": "~1.0"` in the `composer.json` file of your plugin:
  
 ```json
   "require": {
@@ -35,6 +35,11 @@ and run
     
 Alternatively, you can get the `src/resources/assets/less/wpbones-switch.less` and then compile it, or get directly the `src/public/css/wpbones-switch.css` files.    
 Also, you can get pre-compiled minified version `src/public/css/wpbones-switch.min.css`.
+
+## Development installation
+
+Use `yarn` to install the development tools. Next, use `gulp --production` to compile the resources.
+
 
 ## Enqueue for Controller
 
@@ -69,6 +74,21 @@ PureCSSSwitchProvider::css();
 PureCSSSwitchProvider::css();   
 ```
 
+## Theme
+
+Of course, you can switch theme by using `theme` property ot its fluent version.
+Currently, we support two theme:
+
+* `flat-round` - defaul
+* `flat-square`
+
+You should use something lokk like:
+
+```php
+<?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-7' )->theme( 'flat-square' ); ?>
+```
+
+
 ## HTML markup
 
 In your view you can use the `WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton` class
@@ -98,5 +118,9 @@ In your view you can use the `WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton` cla
   <pre>echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-6' )->left_label( 'Swipe me' )->disabled( true )</pre>
   <p>
     <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-6' )->left_label( 'Swipe me' )->disabled( true ) ?>
+  </p>
+  
+  <p>
+    <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-7' )->theme( 'flat-square' ); ?>
   </p>
 ```
