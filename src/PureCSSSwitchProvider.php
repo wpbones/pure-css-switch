@@ -13,14 +13,14 @@ class PureCSSSwitchProvider
 
     $minified = $minified ? ".min" : "";
 
-    $css = "{$path}/public/css/wpbones-switch{$minified}.css";
+    $css = "{$path}/public/css/wpbones-switch-theme{$minified}.css";
 
     return $css;
   }
 
   public static function enqueueStyles( $minified = true )
   {
-    wp_enqueue_style( 'wpbones-switch', self::css( $minified ),
+    wp_enqueue_style( 'wpbones-switch-theme', self::css( $minified ),
                       [],
                       WPKirk()->Version );
   }
