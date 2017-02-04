@@ -79,7 +79,7 @@ PureCSSSwitchProvider::css();
 Of course, you can switch theme by using `theme` property ot its fluent version.
 Currently, we support two theme:
 
-* `flat-round` - defaul
+* `flat-round` - default
 * `flat-square`
 
 You should use something lokk like:
