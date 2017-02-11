@@ -34,6 +34,7 @@ class HtmlTagSwitchButton extends HtmlTag
     'left_label'  => null,
     'checked'     => false,
     'disabled'    => false,
+    'mode'        => 'switch'
   ];
 
   public static function __callStatic( $name, $arguments )
@@ -55,6 +56,11 @@ class HtmlTagSwitchButton extends HtmlTag
       $this->name = $this->id;
     }
 
+    $mode = 'switch';
+    if( in_array( $this->mode, [ 'switch', 'select' ] ) ) {
+      $mode = $this->mode;
+    }
+
     $checked    = wpbones_is_true( $this->checked ) ? 'checked="checked"' : '';
     $disabled   = wpbones_is_true( $this->disabled ) ? 'disabled="disabled"' : '';
     $leftLabel  = wpbones_is_true( $this->left_label ) ? "<label for=\"{$this->id}\">{$this->left_label}</label>" : '';
@@ -62,7 +68,7 @@ class HtmlTagSwitchButton extends HtmlTag
 
     ob_start(); ?>
 
-    <div class="wpbones-switch-button wpbones-switch-button-<?php echo $this->theme ?> <?php echo $disabled ? 'disabled' : '' ?>">
+    <div class="wpbones-switch-button wpbones-switch-mode-<?php echo $mode ?> wpbones-switch-button-<?php echo $this->theme ?> <?php echo $disabled ? 'disabled' : '' ?>">
       <input type="hidden"
              name="<?php echo $this->name ?>"
              value="0"/>

@@ -75,3 +75,8 @@
   margin-left: 24px;
   background-color: #d5d5d5;
 }
+.wpbones-switch-button.wpbones-switch-button-flat-square.wpbones-switch-mode-select input[type="checkbox"] + label:after,
+.wpbones-switch-button.wpbones-switch-button-flat-square.wpbones-switch-mode-select:hover input[type="checkbox"]:checked + label,
+.wpbones-switch-button.wpbones-switch-button-flat-square.wpbones-switch-mode-select input[type="checkbox"] + label {
+  background-color: #579fcb !important;
+}

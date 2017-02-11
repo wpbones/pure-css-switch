@@ -93,4 +93,14 @@
     background-color : @wpbones-switch-theme-flat-color-disabled-border;
   }
 
+  &.wpbones-switch-button-flat-round {
+    &.wpbones-switch-mode-select {
+      input[type="checkbox"] + label:after,
+      &:hover input[type="checkbox"]:checked + label,
+      input[type="checkbox"] + label {
+        background-color : @wpbones-switch-theme-flat-color-on !important;
+      }
+    }
+  }
+
 }

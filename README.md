@@ -74,6 +74,17 @@ PureCSSSwitchProvider::css();
 PureCSSSwitchProvider::css();   
 ```
 
+## Mode
+
+To default the switch works as on/off button. You can change the mode by seeting `mode` property,
+
+```php
+<?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-7' )->mode( 'select' ); ?>
+```
+
+In the above example, you can use it as selector instead of on/off button.
+
+
 ## Theme
 
 Of course, you can switch theme by using `theme` property ot its fluent version.
@@ -110,17 +121,19 @@ In your view you can use the `WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton` cla
     <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-4' )->left_label( 'Swipe me' )->right_label( 'Swipe me' ); ?>
   </p>
   
-  <pre>echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-5' )->left_label( 'Swipe me' )->checked( true )</pre>
   <p>
     <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-5' )->left_label( 'Swipe me' )->checked( true ) ?>
   </p>
 
-  <pre>echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-6' )->left_label( 'Swipe me' )->disabled( true )</pre>
   <p>
     <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-6' )->left_label( 'Swipe me' )->disabled( true ) ?>
   </p>
   
   <p>
     <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-7' )->theme( 'flat-square' ); ?>
+  </p>
+  
+  <p>
+    <?php echo WPKirk\PureCSSSwitch\Html\HtmlTagSwitchButton::name( 'test-switch-8' )->left_label( 'Turn left' )->right_label( 'Turn right' )->mode( 'select' ); ?>
   </p>
 ```
