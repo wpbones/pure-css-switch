@@ -1,6 +1,5 @@
 {
   "name": "wpbones/pure-css-switch",
-  "version": "1.1.0",
   "homepage": "https://github.com/wpbones/pure-css-switch",
   "license": "MIT",
   "type": "library",
@@ -13,12 +12,8 @@
   "authors": [{
     "name": "Giovambattista Fazioli",
     "email": "giovambattista.fazioli@gmail.com",
-    "homepage": "http://undolog.com"
+    "homepage": "http://wpbones.wordpress.com"
   }],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wpbones/pure-css-switch.git"
-  },
   "support": {
     "email": "giovambattista.fazioli@gmail.com",
     "issues": "https://github.com/wpbones/pure-css-switch/issues"
