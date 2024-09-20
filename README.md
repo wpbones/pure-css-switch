@@ -26,6 +26,8 @@
 
 Pure CSS Switch Button for WordPress/WP Bones
 
+![Pure CSS Switch Button for WP Bones](https://github.com/user-attachments/assets/29822083-a547-4da6-a0e8-e1a048134e26)
+
 ## Requirements
 
 This package works with a WordPress plugin written with [WP Bones framework library](https://github.com/wpbones/WPBones).
