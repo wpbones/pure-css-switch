@@ -1,28 +1,15 @@
 # Pure CSS Switch Button for WP Bones
 
-<p align="center">
+<div align="center">
 
-  <a href="https://packagist.org/packages/wpbones/pure-css-switch">
-  <img src="https://poser.pugx.org/wpbones/pure-css-switch/v/stable?style=for-the-badge" alt="Latest Stable Version" />
-  </a>
+[![Latest Stable Version](https://poser.pugx.org/wpbones/pure-css-switch/v/stable?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
+[![Latest Unstable Version](https://poser.pugx.org/wpbones/pure-css-switch/v/unstable?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
+[![Total Downloads](https://poser.pugx.org/wpbones/pure-css-switch/downloads?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
+[![License](https://poser.pugx.org/wpbones/pure-css-switch/license?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
+[![Monthly Downloads](https://poser.pugx.org/wpbones/pure-css-switch/d/monthly?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch)
 
-  <a href="https://packagist.org/packages/wpbones/pure-css-switch">
-   <img src="https://poser.pugx.org/wpbones/pure-css-switch/v/unstable?style=for-the-badge" alt="Latest Unstable Version" />
-  </a>
 
-  <a href="https://packagist.org/packages/wpbones/pure-css-switch">
-   <img src="https://poser.pugx.org/wpbones/pure-css-switch/downloads?style=for-the-badge" alt="Total Downloads" />
-  </a>
-
-  <a href="https://packagist.org/packages/wpbones/pure-css-switch">
-   <img src="https://poser.pugx.org/wpbones/pure-css-switch/license?style=for-the-badge" alt="License" />
-  </a>
-
-  <a href="https://packagist.org/packages/wpbones/pure-css-switch">
-   <img src="https://poser.pugx.org/wpbones/pure-css-switch/d/monthly?style=for-the-badge" alt="Monthly Downloads" />
-  </a>
-
-</p>
+</div>
 
 Pure CSS Switch Button for WordPress/WP Bones
 
