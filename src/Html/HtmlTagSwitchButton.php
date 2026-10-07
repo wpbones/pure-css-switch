@@ -46,7 +46,8 @@ class HtmlTagSwitchButton extends HtmlTag
    *     echo $switch->name('newsletter');
    *
    * The factory is a separate object so that name() stays a plain setter on a switch, as in 1.1:
-   * `HtmlTagSwitchButton::left_label('On')->name('x')` keeps its label.
+   * `HtmlTagSwitchButton::left_label('On')->name('x')` keeps its label. Every argument reaches the
+   * new switch, so a chain may also start with data() or attributes().
    *
    * @since 1.2.0
    *
@@ -57,7 +58,7 @@ class HtmlTagSwitchButton extends HtmlTag
     return new class {
       public function __call($name, $arguments)
       {
-        return HtmlTagSwitchButton::__callStatic($name, $arguments);
+        return (new HtmlTagSwitchButton())->{$name}(...$arguments);
       }
     };
   }
