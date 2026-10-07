@@ -37,16 +37,29 @@ class HtmlTagSwitchButton extends HtmlTag
     'mode'        => 'switch'
   ];
 
+  /**
+   * A switch factory, for a view with several switches: each call on it starts a new switch, so an
+   * attribute set on one switch does not carry over to the next.
+   *
+   *     $switch = HtmlTagSwitchButton::useSwitch();
+   *     echo $switch->name('notifications')->checked(true);
+   *     echo $switch->name('newsletter');
+   *
+   * The factory is a separate object so that name() stays a plain setter on a switch, as in 1.1:
+   * `HtmlTagSwitchButton::left_label('On')->name('x')` keeps its label.
+   *
+   * @since 1.2.0
+   *
+   * @return object Any method called on it returns a new HtmlTagSwitchButton.
+   */
   public static function useSwitch()
   {
-    return new self();
-  }
-
-  public static function name($name)
-  {
-    $instance = new self();
-    $instance->name = $name;
-    return $instance;
+    return new class {
+      public function __call($name, $arguments)
+      {
+        return HtmlTagSwitchButton::__callStatic($name, $arguments);
+      }
+    };
   }
 
   public static function __callStatic($name, $arguments)

@@ -179,4 +179,4 @@ Since 1.2.0, `useSwitch()` gives you a switch factory for a view with several sw
   ->left_label( 'Newsletter' ); ?>
 ```
 
-Each `name()` starts a new switch, so an attribute such as `checked` stays on the switch it was set on. For the same reason, call `name()` first in a chain: anything set before it is dropped.
+Each call on `$switch` starts a new switch, so an attribute such as `checked` stays on the switch it was set on. On a switch, `name()` is a setter like the others: a chain may set other attributes first.
