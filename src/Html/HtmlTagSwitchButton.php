@@ -63,12 +63,15 @@ class HtmlTagSwitchButton extends HtmlTag
     };
   }
 
+  /**
+   * A new switch with one attribute set: `HtmlTagSwitchButton::name('x')`. Every argument is passed
+   * on as given, null included; a call without arguments gets an empty array, as before.
+   */
   public static function __callStatic($name, $arguments)
   {
-    $args = (isset($arguments[0]) && ! is_null($arguments[0])) ? $arguments[0] : [];
     $instance = new self();
 
-    return $instance->{$name}($args);
+    return $instance->{$name}(...($arguments === [] ? [[]] : $arguments));
   }
 
   public function html()
