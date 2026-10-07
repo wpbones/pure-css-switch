@@ -3,7 +3,6 @@
 <div align="center">
 
 [![Latest Stable Version](https://poser.pugx.org/wpbones/pure-css-switch/v/stable?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
-[![Latest Unstable Version](https://poser.pugx.org/wpbones/pure-css-switch/v/unstable?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
 [![Total Downloads](https://poser.pugx.org/wpbones/pure-css-switch/downloads?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
 [![License](https://poser.pugx.org/wpbones/pure-css-switch/license?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch) &nbsp;
 [![Monthly Downloads](https://poser.pugx.org/wpbones/pure-css-switch/d/monthly?style=for-the-badge)](https://packagist.org/packages/wpbones/pure-css-switch)
