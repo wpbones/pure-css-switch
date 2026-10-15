@@ -10,6 +10,11 @@
 
 </div>
 
+<div align="center">
+  <p><img src="https://raw.githubusercontent.com/wpbones/.github/main/glancecard/pure-css-switch.svg" width="880" alt="pure-css-switch at a glance, refreshed daily: commits, releases, stars, issues and pull requests, a year of commit activity, the weekly rhythm, languages, latest commits and releases, contributors" /><br>
+  <sub>Made with <a href="https://github.com/gfazioli/glancecard">glancecard</a> · refreshed daily</sub></p>
+</div>
+
 Pure CSS Switch Button for WordPress/WP Bones
 
 ![Pure CSS Switch Button for WP Bones](https://github.com/user-attachments/assets/29822083-a547-4da6-a0e8-e1a048134e26)
